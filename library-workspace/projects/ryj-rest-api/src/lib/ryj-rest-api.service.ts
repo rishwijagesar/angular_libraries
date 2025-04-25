@@ -5,12 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AngularEasyRestApiService {
+export class RyjRestApiService {
   protected readonly headers = {"Content-Type": "application/json"};
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { 
+  };
 
-  public getAllEntity(baseUrl: string, paramaters: any): Observable<any[]> {
+  public getAllEntities(baseUrl: string, paramaters: any): Observable<any[]> {
     const headers = this.headers;
     return this.httpClient.get<any[]>(`${baseUrl}/${paramaters}`, {headers, withCredentials: true});
   };
