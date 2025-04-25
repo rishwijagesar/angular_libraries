@@ -1,8 +1,6 @@
 {
-  "name": "ryj-rest-api",
-  "version": "1.0.1",  
-  "author": "Rishwi Y. Jagesar",  
-  "license": "MIT",  
+  "name": "ryj-promises-api",
+  "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^19.2.0",
     "@angular/core": "^19.2.0"
