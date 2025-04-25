@@ -6,49 +6,47 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AngularEasyRestApiService {
-
-  private readonly baseUrl = 'https://api.example.com';
-  private readonly headers = {"Content-Type": "application/json"};
+  protected readonly headers = {"Content-Type": "application/json"};
 
   constructor(private httpClient: HttpClient) { }
 
-  public getAllEntity(paramaters: any): Observable<any[]> {
+  public getAllEntity(baseUrl: string, paramaters: any): Observable<any[]> {
     const headers = this.headers;
-    return this.httpClient.get<any[]>(`${this.baseUrl}/${paramaters}`, {headers, withCredentials: true});
+    return this.httpClient.get<any[]>(`${baseUrl}/${paramaters}`, {headers, withCredentials: true});
   };
 
-  public getEntity(paramaters: any): Observable<any> {
+  public getEntity(baseUrl: string, paramaters: any): Observable<any> {
     const headers = this.headers;
-    return this.httpClient.get<any>(`${this.baseUrl}/${paramaters}`, {headers, withCredentials: true});
+    return this.httpClient.get<any>(`${baseUrl}/${paramaters}`, {headers, withCredentials: true});
   };
 
-  public getEntityById(paramaters: any, id: number): Observable<any> {
+  public getEntityById(baseUrl: string, paramaters: any, id: number): Observable<any> {
     const headers = this.headers;
-    return this.httpClient.get<any>(`${this.baseUrl}/${paramaters}/${id}`, {headers, withCredentials: true});
+    return this.httpClient.get<any>(`${baseUrl}/${paramaters}/${id}`, {headers, withCredentials: true});
   };
 
-  public getEntityByName(paramaters: any, name: string): Observable<any> {
+  public getEntityByName(baseUrl: string, paramaters: any, name: string): Observable<any> {
     const headers = this.headers;
-    return this.httpClient.get<any>(`${this.baseUrl}/${paramaters}/${name}`, {headers, withCredentials: true});
+    return this.httpClient.get<any>(`${baseUrl}/${paramaters}/${name}`, {headers, withCredentials: true});
   };
 
-  public createEntity(paramaters: any, object: any): Observable<any> {
+  public createEntity(baseUrl: string, paramaters: any, object: any): Observable<any> {
     const headers = this.headers;
-    return this.httpClient.post<any>(`${this.baseUrl}/${paramaters}`, object, {headers, withCredentials: true});
+    return this.httpClient.post<any>(`${baseUrl}/${paramaters}`, object, {headers, withCredentials: true});
   }
 
-  public updateEntity(paramaters: any, object: any, id: string): Observable<any> {
+  public updateEntity(baseUrl: string, paramaters: any, object: any, id: string): Observable<any> {
     const headers = this.headers;
-    return this.httpClient.put<any>(`${this.baseUrl}/${paramaters}/${id}`, object, {headers, withCredentials: true});
+    return this.httpClient.put<any>(`${baseUrl}/${paramaters}/${id}`, object, {headers, withCredentials: true});
   };
 
-  public deleteEntity(paramaters: any, id: string): Observable<any> {
+  public deleteEntity(baseUrl: string, paramaters: any, id: string): Observable<any> {
     const headers = this.headers;
-    return this.httpClient.delete<any>(`${this.baseUrl}/${paramaters}/${id}`, {headers, withCredentials: true});
+    return this.httpClient.delete<any>(`${baseUrl}/${paramaters}/${id}`, {headers, withCredentials: true});
   };
 
-  public deleteAllEntities(paramaters: any): Observable<any> {
+  public deleteAllEntities(baseUrl: string, paramaters: any): Observable<any> {
     const headers = this.headers;
-    return this.httpClient.delete<any>(`${this.baseUrl}/${paramaters}`, {headers, withCredentials: true});
+    return this.httpClient.delete<any>(`${baseUrl}/${paramaters}`, {headers, withCredentials: true});
   };
 }
