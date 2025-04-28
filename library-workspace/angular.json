@@ -68,6 +68,105 @@
           }
         }
       }
+    },
+    "ryj-observable-api": {
+      "projectType": "library",
+      "root": "projects/ryj-observable-api",
+      "sourceRoot": "projects/ryj-observable-api/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ryj-observable-api/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ryj-observable-api/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ryj-observable-api/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ryj-observable-api/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "ryj-promises-api": {
+      "projectType": "library",
+      "root": "projects/ryj-promises-api",
+      "sourceRoot": "projects/ryj-promises-api/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ryj-promises-api/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ryj-promises-api/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ryj-promises-api/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ryj-promises-api/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "ryj-observables-api": {
+      "projectType": "library",
+      "root": "projects/ryj-observables-api",
+      "sourceRoot": "projects/ryj-observables-api/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ryj-observables-api/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ryj-observables-api/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ryj-observables-api/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ryj-observables-api/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

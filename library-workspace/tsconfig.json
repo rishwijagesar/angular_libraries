@@ -7,6 +7,15 @@
       "angular-easy-rest-api": [
         "./dist/angular-easy-rest-api"
       ],
+      "ryj-observable-api": [
+        "./dist/ryj-observable-api"
+      ],
+      "ryj-observables-api": [
+        "./dist/ryj-observables-api"
+      ],
+      "ryj-promises-api": [
+        "./dist/ryj-promises-api"
+      ],
       "ryj-rest-api": [
         "./dist/ryj-rest-api"
       ]
