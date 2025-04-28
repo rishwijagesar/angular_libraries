@@ -10,7 +10,7 @@ export abstract class RyjPromisesApiComponent<T> {
     return this.apiService.getAllEntities(baseUrl, resource);
   }
 
-  protected async getAllEntity(baseUrl: string, resource: string, id: number): Promise<T> {
+  protected async getEntityById(baseUrl: string, resource: string, id: number): Promise<T> {
     return this.apiService.getEntityById(baseUrl, resource, id);
   }
 
